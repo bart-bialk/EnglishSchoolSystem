@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Language School | Groups</title>
+    <link rel="stylesheet" th:href="@{/css/groupStyles.css}">
+</head>
+<body>
+<div class="head">
+    <h1>Language School</h1>
+    <h2>All Groups</h2>
+</div>
+<div class="page-wrapper">
+    <div class="content-container">
+        <table id="selectionTable">
+            <thead>
+            <tr>
+                <th>Group</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="group : ${groups}"
+                th:data-group-id="${group.id}"
+                th:data-student-count="${group.isGroupOf.size()}">
+                <td th:text="${group.groupCode} + ' (' + ${group.isGroupOf.size()} + ')' "></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button id="groupAddButton" class="add-btn">Add Student</button>
+        <input type="hidden" id="maxStudents" th:value="${maxStudents}" />
+    </div>
+</div>
+
+<script th:src="@{/js/tableSelection.js}"></script>
+<script th:src="@{/js/buttonSelection.js}"></script>
+<script th:src="@{/js/addStudentButton.js}"></script>
+</body>
+</html>

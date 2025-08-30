@@ -1,0 +1,98 @@
+body {
+    background-color: #90CCF4;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    background-color: #F78888;
+    margin-top: 20px;
+    border: 2px solid #007BFF;
+    padding: 10px;
+}
+
+.tables-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.table-section {
+    width: 45%;
+}
+
+.head{
+    text-align: center;
+    background-color: #F78888;
+    margin-top: 20px;
+    border: 2px solid #007BFF;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #F78888;
+    border: 5px solid #007BFF;
+    width: 600px;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+th, td {
+    border: 1px solid #007BFF;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1.1em;
+    border-bottom: 5px solid #007BFF;
+}
+
+tr.selected {
+    background-color: #A84040;
+    color: black;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    cursor: pointer;
+    background-color: #F78888;
+    transition: background-color 0.2s;
+    color: black;
+    font-weight: bold;
+}
+
+@keyframes flashRed {
+    0% {
+        background-color: #A84040;
+        color: #F78888;
+    }
+    100% {
+        background-color: #A84040;
+        color: #F78888;
+    }
+}
+
+button.flash {
+    animation: flashRed 0.3s ease;
+}
+
+
